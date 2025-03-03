@@ -1,34 +1,48 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const socialLinks = document.querySelectorAll(".social-links a");
-    
-    socialLinks.forEach(link => {
-        link.addEventListener("mouseover", function() {
-            this.style.transform = "scale(1.2)";
-            this.style.boxShadow = "0px 0px 20px rgba(255, 140, 0, 0.9)";
-        });
-        
-        link.addEventListener("mouseout", function() {
-            this.style.transform = "scale(1)";
-            this.style.boxShadow = "none";
-        });
-    });
-    
+document.addEventListener("DOMContentLoaded", function () {
     const musicPlayer = document.getElementById("music-player");
-    
-    if (musicPlayer) {
-        musicPlayer.innerHTML = `<iframe 
-            src="https://open.spotify.com/embed/artist/6U2uiDjkl2MtPIWWP5ZsVk" 
-            width="100%" height="380" frameborder="0" 
-            allowtransparency="true" allow="encrypted-media"></iframe>`;
-    }
+    const playBtn = document.getElementById("play-btn");
+    const pauseBtn = document.getElementById("pause-btn");
+    const progress = document.getElementById("progress");
 
-    // Smooth scrolling for navigation
+    playBtn.addEventListener("click", function () {
+        musicPlayer.play();
+    });
+
+    pauseBtn.addEventListener("click", function () {
+        musicPlayer.pause();
+    });
+
+    musicPlayer.addEventListener("timeupdate", function () {
+        progress.value = (musicPlayer.currentTime / musicPlayer.duration) * 100;
+    });
+
+    // Smooth scrolling animation
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function(e) {
+        anchor.addEventListener("click", function (e) {
             e.preventDefault();
             document.querySelector(this.getAttribute("href")).scrollIntoView({
                 behavior: "smooth"
             });
+        });
+    });
+
+    // Logo hover animation
+    const logo = document.querySelector(".logo");
+    logo.addEventListener("mouseenter", function () {
+        logo.style.transform = "rotate(10deg) scale(1.1)";
+    });
+    logo.addEventListener("mouseleave", function () {
+        logo.style.transform = "rotate(0) scale(1)";
+    });
+
+    // Button hover animations
+    const buttons = document.querySelectorAll("button");
+    buttons.forEach(button => {
+        button.addEventListener("mouseover", () => {
+            button.style.transform = "scale(1.1)";
+        });
+        button.addEventListener("mouseleave", () => {
+            button.style.transform = "scale(1)";
         });
     });
 });
