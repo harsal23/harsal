@@ -1,72 +1,48 @@
-body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(45deg, #0f0c29, #302b63, #24243e);
-    color: white;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-}
-
-header {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    font-size: 2.5rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    animation: fadeIn 2s;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-}
-
-.artist-photo {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
-    margin: 20px auto;
-    animation: float 3s infinite ease-in-out;
-}
-
-.music-player iframe {
-    width: 80%;
-    height: 300px;
-    border-radius: 15px;
-    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
-    margin-top: 20px;
-}
-
-.social-links a {
-    display: inline-block;
-    margin: 10px;
-    padding: 12px 18px;
-    color: white;
-    background: linear-gradient(45deg, #ff0080, #ff8c00);
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
-    letter-spacing: 1px;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.social-links a:hover {
-    transform: scale(1.1);
-    box-shadow: 0px 0px 15px rgba(255, 140, 0, 0.8);
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
-}
-
-.footer {
-    background: rgba(0, 0, 0, 0.9);
-    padding: 20px;
-    margin-top: 40px;
-    font-size: 1rem;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harsal - Official Artist Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <img src="https://your-image-url.com/harsal-photo.jpg" alt="Harsal Photo" class="artist-photo">
+        <h1>Harsal</h1>
+        <p>Singer | Composer | Songwriter</p>
+    </header>
+    
+    <section id="music-player">
+        <h2>Listen to My Music</h2>
+        <iframe src="https://open.spotify.com/embed/artist/6U2uiDjkl2MtPIWWP5ZsVk" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </section>
+    
+    <section id="social-media">
+        <h2>Connect with Me</h2>
+        <div class="social-links">
+            <a href="https://open.spotify.com/artist/6U2uiDjkl2MtPIWWP5ZsVk" target="_blank">Spotify</a>
+            <a href="https://music.apple.com/in/artist/harsal/1613599670" target="_blank">Apple Music</a>
+            <a href="https://www.jiosaavn.com/artist/harsal-songs/iNVZWmudGZ4_" target="_blank">JioSaavn</a>
+            <a href="https://www.youtube.com/channel/UC0i9EmZSuV2kfMk-NaGqy2Q" target="_blank">YouTube</a>
+            <a href="https://www.instagram.com/harsalmusic/" target="_blank">Instagram</a>
+        </div>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+    </section>
+    
+    <footer>
+        <img src="https://your-image-url.com/harsal-photo.jpg" alt="Harsal Photo" class="artist-photo">
+        <p>&copy; 2024 Harsal. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
