@@ -3,46 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Harsal Music - Official Website</title>
-    <link rel="stylesheet" href="animated_music_styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>Harsal - Official Artist Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <header class="hero">
-        <img src="6d0ed735-0ff3-4afd-97d1-044b6fa4b73e__2_-removebg-preview.png" alt="Harsal Logo" class="logo">
-        <h1>Welcome to Harsal Music</h1>
-        <p>Your Destination for Soulful Music & Melodic Vibes</p>
+    <header>
+        <div class="logo">
+            <img src="Meri_Har_Subah_Tu-removebg-preview.png" alt="Harsal Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#videos">Videos</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
     
-    <section class="about">
-        <h2>About Harsal</h2>
-        <p>Harsal is a singer, composer, and songwriter known for his deep, emotional, and melodious music. With a growing fan base and a strong presence in the music industry, he continues to touch hearts worldwide.</p>
-    </section>
-
-    <section class="music-player">
-        <h2>Listen to Harsal</h2>
-        <iframe src="https://open.spotify.com/embed/artist/6U2uiDjkl2MtPIWWP5ZsVk" frameborder="0" allowfullscreen></iframe>
-    </section>
-
-    <section class="social-links">
-        <h2>Follow Harsal</h2>
-        <a href="https://open.spotify.com/artist/6U2uiDjkl2MtPIWWP5ZsVk" target="_blank">Spotify</a>
-        <a href="https://music.apple.com/in/artist/harsal/1613599670" target="_blank">Apple Music</a>
-        <a href="https://www.jiosaavn.com/artist/harsal-songs/iNVZWmudGZ4_" target="_blank">JioSaavn</a>
-        <a href="https://www.youtube.com/channel/UC0i9EmZSuV2kfMk-NaGqy2Q" target="_blank">YouTube</a>
-        <a href="https://www.instagram.com/harsalmusic" target="_blank">Instagram</a>
+    <section id="hero">
+        <h1>Welcome to the Official Site of Harsal</h1>
+        <p>Singer | Composer | Songwriter</p>
+        <a href="#music" class="btn">Listen Now</a>
     </section>
     
-    <section class="contact">
-        <h2>Contact</h2>
-        <p>For bookings, collaborations, or inquiries, reach out:</p>
-        <p>Email: <a href="mailto:harsal380@gmail.com">harsal380@gmail.com</a></p>
+    <section id="about">
+        <h2>About Harsal</h2>
+        <p>Harsal is a renowned Indian singer, composer, and songwriter, known for his soulful melodies and powerful lyrics.</p>
     </section>
-
-    <footer class="footer">
-        <p>&copy; 2025 Harsal Music. All rights reserved.</p>
+    
+    <section id="music">
+        <h2>Music</h2>
+        <div class="music-player">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/6U2uiDjkl2MtPIWWP5ZsVk?utm_source=generator" width="100%" height="152" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+        </div>
+    </section>
+    
+    <section id="videos">
+        <h2>Latest Videos</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=UC0i9EmZSuV2kfMk-NaGqy2Q" frameborder="0" allowfullscreen></iframe>
+    </section>
+    
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:harsal380@gmail.com">harsal380@gmail.com</a></p>
+        <p>Follow on: 
+            <a href="https://www.instagram.com/harsalmusic">Instagram</a> | 
+            <a href="https://www.youtube.com/channel/UC0i9EmZSuV2kfMk-NaGqy2Q">YouTube</a>
+        </p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Harsal. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
