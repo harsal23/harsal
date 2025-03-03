@@ -1,59 +1,11 @@
+/* General Styling */
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #1d1e22, #3a3d4e);
-    color: white;
-    text-align: center;
-}
-
-.hero {
-    background: url('music-bg.jpg') center/cover no-repeat;
-    padding: 50px 20px;
-    animation: fadeIn 2s ease-in-out;
-}
-
-.logo {
-    width: 150px;
-    animation: bounce 2s infinite;
-}
-
-h1 {
-    font-size: 3rem;
-    font-weight: 700;
-}
-
-.about, .music-player, .social-links, .contact {
-    margin: 40px auto;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    width: 80%;
-    animation: slideUp 1.5s ease-in-out;
-}
-
-iframe {
-    width: 100%;
-    height: 200px;
-    border-radius: 10px;
-}
-
-a {
-    color: #ffcc00;
-    text-decoration: none;
-    font-size: 1.2rem;
-    display: block;
-    margin: 10px 0;
-}
-
-a:hover {
-    color: #ff6600;
-}
-
-.footer {
-    padding: 20px;
-    background: #222;
-    font-size: 0.9rem;
+    background: linear-gradient(135deg, #1e1e2f, #3a3a69);
+    color: #fff;
+    animation: fadeIn 1s ease-in-out;
 }
 
 @keyframes fadeIn {
@@ -61,12 +13,84 @@ a:hover {
     to { opacity: 1; }
 }
 
-@keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+/* Header Styling */
+header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    animation: slideDown 1s ease-in-out;
 }
 
-@keyframes slideUp {
-    from { transform: translateY(30px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
+@keyframes slideDown {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+}
+
+/* Artist Section */
+.artist-profile {
+    text-align: center;
+    padding: 50px;
+}
+.artist-profile img {
+    width: 200px;
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    animation: popIn 1s ease-in-out;
+}
+@keyframes popIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Music Player */
+.music-player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+.music-player iframe {
+    width: 80%;
+    max-width: 600px;
+    height: 200px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Social Media Links */
+.social-links {
+    text-align: center;
+    margin-top: 20px;
+}
+.social-links a {
+    margin: 10px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: white;
+    background: #ff5722;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+.social-links a:hover {
+    transform: scale(1.1);
+}
+
+/* Contact Section */
+.contact {
+    text-align: center;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.7);
+}
+.contact a {
+    color: #ffeb3b;
+    font-weight: bold;
+    text-decoration: none;
+}
+.contact a:hover {
+    text-decoration: underline;
 }
